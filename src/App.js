@@ -15,13 +15,11 @@ function App() {
       <Router>
         <Switch>
           <Route path="/admissionOffer">
-            <LeadMain />
-          </Route>
-          <Route path="/home">
             <BridgeMain />
           </Route>
+          
           <Route exact path="/">
-            <BridgeMain />
+            <LeadMain />
           </Route>
         </Switch>
       </Router>
