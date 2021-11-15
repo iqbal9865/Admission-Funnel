@@ -7,19 +7,19 @@ const OptinForm = () => {
     
 
     return (
-        <div className="m-5">
-            <h3 style={{"textAlign": "left", "margin": "15px 0px", "fontWeight":"700"}}>GET IN TOUCH</h3>
+        <div>
             
-            <form onSubmit={handleSubmit(onSubmit)}> 
-            <div className="form-group">
-                
-                <input style={{"borderRadius": '0'}} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" {...register("email", { required: true })} />
-                
-             </div>
-            <br />
-            <div className="form-group">
-                <button style={{"borderRadius": '0', "backgroundColor":"#003366", "color":"white", "fontWeight":"700"}} type="submit" className="form-control btn">SUBMIT</button>
-            </div>
+            <form className=" mx-lg-5 px-lg-5" onSubmit={handleSubmit(onSubmit)}> 
+           
+
+             <div class="input-group mt-4">
+                <input style={{borderRadius:'0'}} type="email" class="form-control" placeholder="Enter Your Email" aria-label="Enter Your Email" aria-describedby="basic-addon2" {...register("email", { required: true })}  />
+                <div class="input-group-append">
+                    <button type="submit" style={{backgroundColor:"#E55259",border:"none",padding:"08px", borderRadius:'0',color:'white',fontWeight:'500'}} class="input-group-text" id="basic-addon2">SUBMIT</button>
+                </div>
+                </div>
+             
+            
             </form>
         </div>
     );

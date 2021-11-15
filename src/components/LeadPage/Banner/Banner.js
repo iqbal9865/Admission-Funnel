@@ -1,10 +1,26 @@
 import React from 'react';
 import banner from '../../../images/banner.jpg';
+import BannerCSS from './Banner.module.css'
 const Banner = () => {
     return (
-        <div style={{backgroundColor:''}} className="m-5">
-            <h3 style={{"textAlign": "justify", "margin": "15px 0px", "fontWeight":"700"}}>30% WEAVER FOR NEW STUDENT</h3>
-            <p style={{"textAlign" : "justify","margin":"10px 0","fontWeight":"400", "fontSize":"17px"}}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+        <div className="row m-5">
+            <div className='col-md-6'>
+                <h3 className={BannerCSS.header3}>
+                    30% Weaver for New Students
+                </h3>
+                <p className={BannerCSS.para}>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, aperiam illum. Consequatur voluptates aliquid fuga esse, eum, harum praesentium laudantium natus ipsam ipsum voluptate sed iure reprehenderit vel sequi ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ullam?Lorem, ipsum.
+                </p>
+            </div>
+            <div className='col-md-6'>
+            <h3 className={BannerCSS.header3}>
+                    20% Weaver for Existing Students
+                </h3>
+                <p className={BannerCSS.para}>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, aperiam illum. Consequatur voluptates aliquid fuga esse, eum, harum praesentium laudantium natus ipsam ipsum voluptate sed iure reprehenderit vel sequi ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, beatae! Lorem ipsum
+                </p>
+            </div>
+
         </div>
     );
 };

@@ -8,13 +8,8 @@ const LeadMain = () => {
             <div>
                 <OfferSummary />
             </div>
-            <div className="row container-fluid">
-            <div className="col-md-6">
-                <Banner />
-            </div>
-            <div className="col-md-6">
-                <OptinForm />
-            </div>
+            <div className="container-fluid mt-5 px-5" >
+                <Banner /> 
           </div>
             
         </div>
