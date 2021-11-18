@@ -1,0 +1,10 @@
+
+.unorderlist{
+    list-style: none;
+    line-height: 20px;
+    color:white;
+}
+
+.paraStyle{
+    font-style: italic;
+}
