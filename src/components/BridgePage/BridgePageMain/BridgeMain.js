@@ -4,8 +4,10 @@ import Testimonials from '../Testimonials/Testimonials';
 const BridgeMain = () => {
     return (
         <div>
-            <BridgeTop />
+            
             <Testimonials />
+            
+          
         </div>
     );
 };

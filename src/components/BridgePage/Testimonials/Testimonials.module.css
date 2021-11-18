@@ -8,3 +8,12 @@
 .paraStyle{
     font-style: italic;
 }
+.bg{
+    background-image: url(../../../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.topHeader{
+    text-transform: uppercase;
+}

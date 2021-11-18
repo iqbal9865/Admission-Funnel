@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import {Link} from "react-router-dom";
+import "./OptinForm.css"
 const OptinForm = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -13,9 +14,9 @@ const OptinForm = () => {
             <form className=" mx-lg-5 px-lg-5" onSubmit={handleSubmit(onSubmit)}> 
            
              <div class="input-group mt-4">
-                <input style={{borderRadius:'0'}} type="email" class="form-control" placeholder="Enter Your Email" aria-label="Enter Your Email" aria-describedby="basic-addon2" {...register("email", { required: true })}  />
-                <div class="input-group-append">
-                    <button type="submit" style={{backgroundColor:"#E55259",border:"none",padding:"08px", borderRadius:'0',fontWeight:'500'}} class="input-group-text" id="basic-addon2"><Link to="/admissionOffer" style={{color:'white',textDecoration:'none'}}>SUBMIT</Link></button>
+                <input style={{borderRadius:'0'}} type="email" required class="form-control" placeholder="Enter Your Email" aria-label="Enter Your Email" aria-describedby="basic-addon2" {...register("email", { required: true })}  />
+                <div class="input-group-append" >
+                    <button type="submit"  className=" input-group-text" id="email-submit-btn"><Link to="/admissionOffer" id='email-submit-btn-link'>SUBMIT</Link></button>
                 </div>
                 </div>
              
@@ -24,14 +25,5 @@ const OptinForm = () => {
         </div>
     );
 };
-// div{
-//     h3{
 
-//     }
-//     form{
-//         input{
-
-//         }
-//     }
-// }
 export default OptinForm;

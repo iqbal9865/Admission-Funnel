@@ -1,0 +1,25 @@
+
+#email-submit-btn{
+    background-color:#FA9516;
+    border: 1px solid #23303F;
+    padding:8px;
+    border-radius: 0;
+    font-weight: 700;
+    margin-left: 1px;
+    /* padding:12px; */
+}
+
+#email-submit-btn:hover{
+    background-color: #23303F;
+    border: 1px solid #FA9516;   
+    color:white;
+}
+
+#email-submit-btn-link{
+    color: black;
+    text-decoration: none;
+    
+}
+#email-submit-btn-link:hover{
+    color: white;
+}
