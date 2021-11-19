@@ -51,33 +51,32 @@ const OfferSummary  = () => {
                <div className="col-md-6 p-4">
                     <h1 style={{color:'#FA9516', fontWeight:'700'}} className="mx-3 px-2 pt-4 pb-2 mt-4">30% WEAVER FOR SPRING SEMESTER 2021</h1>
                     <h3 style={{color:'white',fontWeight:'700'}} className="py-3">ABCD UNIVERSITY</h3>
-                    <h4 style={{color:'white'}} className='py-1'>15 NOVEMBER - 31 DECEMBER</h4>
+                    <h4 style={{color:'white'}} className='pt-1'>15 NOVEMBER - 31 DECEMBER</h4>
 
                     <div style={{color:'white'}} className='timer d-flex align-items-center justify-content-center my-4'>
 
                         <section className="mx-3"  >
-                            <h4 style={{color:'#FA9516', fontWeight:'700'}}>{timerDays}</h4>
+                            <h3 style={{color:'#FA9516', fontWeight:'700'}}>{timerDays}</h3>
                             <h4>Days</h4>
                         </section>
 
                         <section className="mx-3" >
-                            <h4 style={{color:'#FA9516',fontWeight:'700'}}>{timerHours}</h4>
+                            <h3 style={{color:'#FA9516',fontWeight:'700'}}>{timerHours}</h3>
                             <h4>Hours</h4>
                         </section>
 
                         <section className="mx-3" >
-                            <h4 style={{color:'#FA9516',fontWeight:'700'}}>{timerMinites}</h4>
+                            <h3 style={{color:'#FA9516',fontWeight:'700'}}>{timerMinites}</h3>
                             <h4>Minites</h4>
                         </section>
-
                         <section className="mx-3"  >
-                            <h4 style={{color:'#FA9516',fontWeight:'700'}}>{timerSeconds}</h4>
+                            <h3 style={{color:'#FA9516',fontWeight:'700'}}>{timerSeconds}</h3>
                             <h4>Seconds</h4>
                         </section>
 
                     </div>
                     
-                    <div className="pb-3">
+                    <div className="pb-2">
                         <OptinForm />
                         <p className='mx-5 px-5' style={{color:'white',textAlign:'left', marginTop:"4px"}}>Submit Your Email To See More Details</p>
                     </div>
