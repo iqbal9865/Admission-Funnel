@@ -1,9 +1,19 @@
-import React from 'react';
+import React,{useState} from 'react';
 import BridgeTopCSS from './BridgeTop.module.css'
 // import Typical from 'react-typical'
-
+import Registration from '../WebinarReg/Registration'
 
 const BridgeTop = () => {
+
+  const [modalIsOpen,setIsOpen] = useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
     return (
        <div className={BridgeTopCSS.bg}>
           <div className="row py-5">
@@ -15,7 +25,7 @@ const BridgeTop = () => {
 
                 {/* <h1 className='py-4' style={{fontWeight:'700',color:'#FA9516'}}>
                 <Typical
-                                steps={['A LIVE WEBINAR SESSION IS UPCOMING!', 100, 'A SPECIAL OFFER IS GOING ON FOR EXISTING STUDENTS', 100,'30% OFFER IS STILL AVAILABLE FOR NEW STUDENTS', 100,'MERIT SCHOLARSHIP IS AVAILABLE FOR GOOD RESULT', 100]}
+                                steps={['A LIVE WEBINAR SESSION IS UPCOMING!', 500, "A LIVE WEBINAR SESSION IS ONGOING!",500]}
                                 loop={Infinity}
                                 wrapper="p"
                             />
@@ -23,8 +33,9 @@ const BridgeTop = () => {
 
                 <h1 className='py-4' style={{fontWeight:'700',color:'#FA9516'}}>A LIVE WEBINAR SESSION IS UPCOMING!</h1>
                 <h5 style={{fontWeight:'700'}}>JOIN THE WEBINAR TO CONNECT WITH US MORE CLOSSER</h5> 
-                         
-                
+                        
+                <button onClick={openModal} className={`btn p-2 my-2 ${BridgeTopCSS.regbtn}`} style={{color:"black", backgroundColor:'#FA9516', fontWeight:'700',fontSize:'19px',border:'none'}}>REGISTRATION NOW</button>
+                <Registration modalIsOpen={modalIsOpen} closeModal={closeModal} />
               </div>
           </div>
        </div>

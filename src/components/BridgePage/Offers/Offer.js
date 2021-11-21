@@ -2,8 +2,8 @@ import React from 'react';
 
 const Offer = ( {offer} ) => {
     return (
-        <div className="col-md-4 ">
-            <div class="card p-4 shadow" >
+        <div className="col-md-4 py-4">
+            <div class="card  shadow" >
                 <div className="d-flex justify-content-center">
                     <img className="card-img-top img-fluid w-25" src={offer.img} alt="" />
                 </div>

@@ -10,15 +10,20 @@ const Testimonials = () => {
     return (
         <div className={TestimonialsCSS.bg}>
         <div className='container'>
+            
             <div className="row mx-md-n5 py-5">
                 <div style={{backgroundColor: '#23303F',border:'10px solid #FA9516',borderRadius:'1em',color:'white'}} className="col px-md-3 col-md-8">
                     <div className="p-3 py-5">
                         <div className="py-4">
                             <h1 style={{fontWeight: 'bold'}} className={TestimonialsCSS.topHeader}>Admission Going On, 30% Off for Spring Semester 2022</h1>
                         </div>
-                        <div className="py-4 embed-responsive embed-responsive-4by3">
-                            <div className="embed-responsive-item" >
-                                <ReactPlayer  url="https://youtu.be/1sfGOrN33Q4?list=TLGGDRZgbbz7iVsxODExMjAyMQ" />
+                        <div className="py-4 ">
+                            <div className="player-wrapper">
+                                <ReactPlayer  url="https://youtu.be/GNB-lK_cAXo" 
+                                    className="react-player"
+                                    playing
+                                    controls={false}
+                                />
                             </div>
                            
                         </div>

@@ -27,8 +27,10 @@ const offerInfo = [
 const Offers = () => {
     const [offers, setOffers] = useState(offerInfo)
     return (
-        <div className="row m-4 p-3">
+        <div className="row ">
+            <h1 style={{fontWeight:'700',color:'#23303F'}}>SPECIAL OFFERS FOR STUDENTS</h1>
             {
+
                 offers.map(offer => <Offer key={offer.id} offer={offer} />)
             }
         </div>

@@ -5,3 +5,6 @@
     background-size: cover;
     padding:4em;
 }
+.regbtn:hover{
+    text-decoration:underline;
+}
