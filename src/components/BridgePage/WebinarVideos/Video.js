@@ -10,6 +10,8 @@ const Video = ({video}) => {
                         playing
                         width="100%"
                         height="100%"
+                        autoplay="false"
+                        autostart="false"
                         controls={false} 
                     />
                 </div>

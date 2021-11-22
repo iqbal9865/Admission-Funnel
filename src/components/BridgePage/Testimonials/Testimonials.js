@@ -22,7 +22,9 @@ const Testimonials = () => {
                                 <ReactPlayer  url="https://youtu.be/GNB-lK_cAXo" 
                                     className="react-player"
                                     playing
-                                    controls={false}
+                                    // controls={false}
+                                    autoplay={false}
+                                    autostart={false}
                                 />
                             </div>
                            
