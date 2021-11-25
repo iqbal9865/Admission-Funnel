@@ -5,7 +5,7 @@ const Offer = ( {offer} ) => {
         <div className="col-md-4 py-4">
             <div class="card  shadow" >
                 <div className="d-flex justify-content-center">
-                    <img className="card-img-top img-fluid w-25" src={offer.img} alt="" />
+                    <img className="card-img-top img-fluid" src={offer.img} alt="" />
                 </div>
                 
                 <div className="card-body">

@@ -4,6 +4,8 @@ import Blogs from '../Blogs/Blogs';
 import Offers from '../Offers/Offers';
 import Testimonials from '../Testimonials/Testimonials';
 import Videos from '../WebinarVideos/Videos';
+import Events from '../Events/Events';
+import BridgeMainCSS from './BridgePageMain.module.css';
 const BridgeMain = () => {
     return (
         <div>
@@ -12,15 +14,21 @@ const BridgeMain = () => {
             <div className=" m-5">
                 <Offers />
             </div>
-            <div className="m-5">
-                <Videos />
+            <div>
+                <div className="m-5">
+                    <Videos />
+                </div>
+               
             </div>
-
-            <div className='m-5 '>
-                <Blogs />
+            <div  className={`${BridgeMainCSS.videosBg}`}>
+                <div className='m-5 '>
+                    <Blogs />
+                    <Events />
+                </div>
             </div>
-
+           
             <Testimonials />
+            
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import Comment from './Comment';
+
 const Comments = ({handleComments}) => {
     const [text, setText] = useState('');
     const [tasks, setTasks] = useState([])
@@ -28,21 +29,26 @@ const Comments = ({handleComments}) => {
     }
    
     return (
-        <div className="mx-4">
+        <div className="mx-2">
+             <div className=''> 
+                {
+                    tasks.map((task) =><Comment task={task}/>)
+                }
+            </div>
+        
             <form onSubmit={onSubmit}>
-            <div class="form-group" >
-                
-                 <textarea  class="form-control" value={text} onChange={(e) => setText(e.target.value)} id="exampleFormControlTextarea1" placeholder="Write a Comment" rows="2"></textarea> <br  />
+            <div class="form-group d-flex" >
+            
+
+                 <textarea  class="form-control mx-2" value={text} onChange={(e) => setText(e.target.value)} id="exampleFormControlTextarea1" placeholder="Write a Comment" rows="1" style={{borderRadius:'8px'}}></textarea> <br  />
 
                 
                 
-                <input type="submit" style={{backgroundColor:'#2E374E', color:'white'}} class="form-control " />
+                <input type="submit" style={{backgroundColor:'#2E374E', color:'white',borderRadius:'8px'}} class=" " />
             </div>
             
             </form>
-            <div className='py-3'> {
-                tasks.map((task) =><Comment task={task}/>)
-            }</div>
+           
         </div>
     );
 };

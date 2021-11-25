@@ -2,7 +2,8 @@ import React from 'react';
 import {useState, useEffect,useRef} from 'react';
 import OfferSummaryCSS from './OfferSummary.module.css';
 import OptinForm from "../OptinForm/OptinForm"
-import img from "../../../images/StudentBg1.png"
+import offerimg from '../../../images/Admission.gif'
+import logo from '../../../images/BC-removebg-preview.png'
 const OfferSummary  = () => {
 
     const [timerDays, setTimerDays] = useState("00");
@@ -13,7 +14,7 @@ const OfferSummary  = () => {
     let interval = useRef();
 
     const startTimer = () => {
-        const countDownDate = new Date('December 31, 2021 00:00:00').getTime();
+        const countDownDate = new Date('March 10, 2022 00:00:00').getTime();
         interval.current = setInterval(() => {
             const now = new Date().getTime();
             const distance = countDownDate - now;
@@ -49,11 +50,12 @@ const OfferSummary  = () => {
         <div style={{"backgroundColor":"#23303F"}} className="container-fluid p-5" className={OfferSummaryCSS.topSection}>
            <div className="row py-5">
                <div className="col-md-6 p-4">
-                    <h1 style={{color:'#FA9516', fontWeight:'700'}} className="mx-3 px-2 pt-4 pb-2 mt-4">30% WEAVER FOR SPRING SEMESTER 2021</h1>
-                    <h3 style={{color:'white',fontWeight:'700'}} className="py-3">ABCD UNIVERSITY</h3>
-                    <h4 style={{color:'white'}} className='pt-1'>15 NOVEMBER - 31 DECEMBER</h4>
+                    <h1 style={{color:'#FA9516', fontWeight:'700'}} className="mx-3 px-2 py-3 mt-3">50% WEAVER FOR SPRING SEMESTER 2021</h1>
+                    {/* <h3 style={{color:'white',fontWeight:'700'}} className="py-3">XYZ UNIVERSITY</h3> */}
+                    <img src={logo} alt="..." className='img-fluid w-50' />
+                    <h4 style={{color:'white',fontWeight:'700'}} className='pt-2'>15 FEBRUARY - 10 MARCH</h4>
 
-                    <div style={{color:'white'}} className='timer d-flex align-items-center justify-content-center my-4'>
+                    <div style={{color:'white'}} className='timer d-flex align-items-center justify-content-center my-3'>
 
                         <section className="mx-3"  >
                             <h3 style={{color:'#FA9516', fontWeight:'700'}}>{timerDays}</h3>
@@ -82,7 +84,8 @@ const OfferSummary  = () => {
                     </div>
                </div>
                <div className="col-md-6 p-5">
-                    <img className="img-fluid w-75 pt-5" style={{borderRadius:'2em'}} src={img} alt="" />
+                    <img className="img-fluid pt-5 w-75" src={offerimg} alt="" />
+                   
                </div>
            </div>
         </div>
