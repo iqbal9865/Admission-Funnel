@@ -38,13 +38,13 @@ const Blog = ({blog}) => {
                     
                 }
                    <div>
-                    {like ? <FontAwesomeIcon onClick={handleLike} className='mx-1' icon={faThumbsUp} style={{height:'25px', width:'35px',border:'1px solid black',borderRadius:'50%',padding:'2px', cursor:'pointer',color:'black'}} />
+                    {like ? <FontAwesomeIcon onClick={handleLike} className='mx-1' icon={faThumbsUp} style={{height:'25px', width:'35px',border:'1px solid black',borderRadius:'50%',padding:'2px', cursor:'pointer',color:'blue'}} />
                     :
-                    <FontAwesomeIcon onClick={handleLike} className='mx-1' icon={faThumbsUp} style={{height:'25px', width:'35px',border:'1px solid black',borderRadius:'50%',padding:'2px', cursor:'pointer',color:'blue'}} />}
+                    <FontAwesomeIcon onClick={handleLike} className='mx-1' icon={faThumbsUp} style={{height:'25px', width:'35px',border:'1px solid black',borderRadius:'50%',padding:'2px', cursor:'pointer',color:'black'}} />}
 
-                    {disLike ? <FontAwesomeIcon onClick={handleDislike} className='mx-1' icon={faThumbsDown} style={{height:'25px', width:'35px',border:'1px solid black',borderRadius:'50%',padding:'2px', cursor:'pointer',color:'black'}} />
+                    {disLike ? <FontAwesomeIcon onClick={handleDislike} className='mx-1' icon={faThumbsDown} style={{height:'25px', width:'35px',border:'1px solid black',borderRadius:'50%',padding:'2px', cursor:'pointer',color:'blue'}} />
                     :
-                    <FontAwesomeIcon onClick={handleDislike} className='mx-1' icon={faThumbsDown} style={{height:'25px', width:'35px',border:'1px solid black',borderRadius:'50%',padding:'2px', cursor:'pointer',color:'blue'}} />}
+                    <FontAwesomeIcon onClick={handleDislike} className='mx-1' icon={faThumbsDown} style={{height:'25px', width:'35px',border:'1px solid black',borderRadius:'50%',padding:'2px', cursor:'pointer',color:'black'}} />}
                     
                    </div>  
                    

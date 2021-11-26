@@ -2,10 +2,18 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import {Link} from "react-router-dom";
 import "./OptinForm.css"
+import { useHistory } from "react-router-dom";
+
 const OptinForm = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    let history = useHistory();
+
+    const onSubmit = data => {
+            console.log('show output from optin')
+             console.log(data);
+             history.push('/admissionOffer')
+        }
     
 
     return (
@@ -16,7 +24,10 @@ const OptinForm = () => {
              <div class="input-group ">
                 <input style={{borderRadius:'0'}} type="email" required class="form-control" placeholder="Enter Your Email" aria-label="Enter Your Email" aria-describedby="basic-addon2" {...register("email", { required: true })}  />
                 <div class="input-group-append" >
-                    <button type="submit"  className=" input-group-text" id="email-submit-btn"><Link to="/admissionOffer" id='email-submit-btn-link'>SUBMIT</Link></button>
+                    <button type="submit"  className=" input-group-text" id="email-submit-btn">
+                        {/* <Link to="" id='email-submit-btn-link'>SUBMIT</Link> */}
+                        SUBMIT
+                    </button>
                 </div>
                 </div>
              

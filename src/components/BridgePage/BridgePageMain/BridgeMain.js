@@ -6,6 +6,7 @@ import Testimonials from '../Testimonials/Testimonials';
 import Videos from '../WebinarVideos/Videos';
 import Events from '../Events/Events';
 import BridgeMainCSS from './BridgePageMain.module.css';
+import {Link} from 'react-router-dom';
 const BridgeMain = () => {
     return (
         <div>
@@ -28,7 +29,7 @@ const BridgeMain = () => {
             </div>
            
             <Testimonials />
-            
+            <button className='btn btn-warning p-2 m-2'> <Link style={{color:'black', textDecoration:'none'}} to="/admissionInfo">Admission Information</Link> </button>
         </div>
     );
 };

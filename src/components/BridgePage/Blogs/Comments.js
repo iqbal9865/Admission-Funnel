@@ -29,7 +29,7 @@ const Comments = ({handleComments}) => {
     }
    
     return (
-        <div className="mx-2">
+        <div className="mx-1">
              <div className=''> 
                 {
                     tasks.map((task) =><Comment task={task}/>)
@@ -37,10 +37,10 @@ const Comments = ({handleComments}) => {
             </div>
         
             <form onSubmit={onSubmit}>
-            <div class="form-group d-flex" >
+            <div className="form-group d-flex" >
             
 
-                 <textarea  class="form-control mx-2" value={text} onChange={(e) => setText(e.target.value)} id="exampleFormControlTextarea1" placeholder="Write a Comment" rows="1" style={{borderRadius:'8px'}}></textarea> <br  />
+                 <textarea  className="form-control mx-2" value={text} onChange={(e) => setText(e.target.value)} id="exampleFormControlTextarea1" placeholder="Write a Comment" rows="1" style={{borderRadius:'8px'}}></textarea> <br  />
 
                 
                 

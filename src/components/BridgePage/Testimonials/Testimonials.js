@@ -23,8 +23,8 @@ const Testimonials = () => {
                                     className="react-player"
                                     playing
                                     // controls={false}
-                                    autoplay={false}
-                                    autostart={false}
+                                    autoPlay={false}
+                                    autoStart={false}
                                 />
                             </div>
                            

@@ -29,7 +29,7 @@ const Blogs = () => {
             <div className="row my-5 py-2">
                 <h1 style={{color:'#2E374E',fontWeight:'700'}}>RECENT BLOGS</h1>
             {
-                blogsInfo.map(blog => <Blog blog={blog} />)
+                blogsInfo.map(blog => <Blog blog={blog} key={blog.id} />)
             }    
             </div>
         

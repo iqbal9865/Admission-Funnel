@@ -49,8 +49,9 @@ const Registration = ({modalIsOpen,closeModal}) => {
           contentLabel="Example Modal"
         >
 
-         
         <h3 style={{fontWeight:'700',color:'#23303F'}}>REGISTRATION FOR LIVE WEBINAR</h3>
+        <p style={{textAlign:'center', fontWeight:'700'}}>10 FEB 2022, 8:30 PM </p>
+        <p style={{textAlign: 'center',fontWeight:'700'}}>We will sent webinar link to your email</p>
           <form onSubmit={handleSubmit(onSubmit)}>
           <div className='form-group my-3'>
             <input className='form-control' placeholder='Enter Your Name' {...register("name", { required: true })} /> 
@@ -76,7 +77,7 @@ const Registration = ({modalIsOpen,closeModal}) => {
             <div className="col-6">
             <input className='form-control' style={{backgroundColor:'#FA9516', fontSize:'17px', fontWeight:'700',color:'black',border:'none'}} type="submit" />
             </div>
-
+            
           </div>
        
         </form>
