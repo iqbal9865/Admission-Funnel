@@ -1,0 +1,18 @@
+
+.button{
+    background-color:#FA9516;
+    font-weight:700;
+    font-size:19px;
+    border:'none'
+}
+.button:hover{
+    border: 1px solid #FA9516;
+    background-color: wheat;
+}
+.link{
+    color:black;
+    text-decoration: none;
+}
+.link:hover{
+    color: black
+}
