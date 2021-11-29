@@ -12,6 +12,7 @@ const SideBar = () => {
                 <button  className="btn m-3 form-control button"> <Link className='link' to='/scholarships'> Scholarships</Link></button> <br/>
                 <button   className="btn m-3 form-control button"> <Link className='link' to="/AdmissionEligibility"> Admission Eligibility </Link> </button> <br/>
                 <button  className="btn m-3 form-control button"> <Link className='link' to="/onlineAdmission"> Online Admission </Link></button> <br/>
+                <button  className="btn m-3 form-control button"> <Link className='link' to="/payments"> Payments </Link></button> <br/>
                
         </div>
     );
