@@ -6,6 +6,7 @@ import {
   //Link
 } from "react-router-dom";
 import './App.css';
+import { createContext, useState } from 'react';
 import AdmissionEligibility from "./components/AdmissionInfo/AdmissionEligibility/AdmissionEligibility";
 import AdmissionOverview from "./components/AdmissionInfo/AdmissionOverview/AdmissionOverview";
 import OnlineAdmission from "./components/AdmissionInfo/OnlineAdmission/OnlineAdmission";
@@ -15,10 +16,19 @@ import Payments from "./components/AdmissionInfo/Payments/Payments";
 import UnderGraduate from "./components/AdmissionInfo/UnderGraduate/UnderGraduate";
 import BridgeMain from "./components/BridgePage/BridgePageMain/BridgeMain";
 import LeadMain from './components/LeadPage/LeadMain/LeadMain'
+import Login from "./components/Login/Login"
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Dashboard from "./components/Admin/Dashboard";
+import Program from "./components/AdmissionInfo/UnderGraduate/Program";
+
+export const UserContext = createContext();
 
 function App() {
+  
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <div className="App">
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
       <Router>
         <Switch>
           
@@ -54,13 +64,26 @@ function App() {
             <Payments />
           </Route>
 
+          <Route path="/login">
+            <Login />
+          </Route>
+
+          <Route path="/department/:dept">
+            <Program />
+          </Route>
+
+          <PrivateRoute path="/admin">
+            <Dashboard />
+          </PrivateRoute>
+
           <Route exact path="/">
             <LeadMain />
           </Route>
 
         </Switch>
       </Router>
-    </div>
+      </UserContext.Provider>
+      </div>
   );
 }
 

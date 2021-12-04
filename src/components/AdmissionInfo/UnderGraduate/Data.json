@@ -1,0 +1,47 @@
+[
+    {
+        "dept": "CSE",
+        "title": "Department of CSE",
+        "body": "Department of cse is ......"
+    },
+    {
+        "dept":"EEE",
+        "title": "Department of EEE",
+        "body":"Department of eee is ......"
+    },
+    {
+        "dept":"CIVIL",
+        "title": "Department of Civil",
+        "body":"Department of Civil is ......"
+    },
+    {
+        "dept":"Textile",
+        "title": "Department of Textile",
+        "body":"Department of Textile is ......"
+    },
+    {
+        "dept":"English",
+        "title": "Department of English",
+        "body":"Department of English is ......"
+    },
+    {
+        "dept":"BBA",
+        "title": "Department of BBA",
+        "body":"Department of BBA is ......"
+    },
+    {
+        "dept":"Agriculture",
+        "title": "Department of Agriculture",
+        "body":"Department of Agriculture is ......"
+    },
+    {
+        "dept":"LAW",
+        "title": "Department of Law",
+        "body":"Department of Law is ......"
+    },
+    {
+        "dept":"Machanical",
+        "title": "Department of Machanical",
+        "body":"Department of Machanical is ......"
+    }
+]
