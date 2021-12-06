@@ -21,6 +21,12 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Dashboard from "./components/Admin/Dashboard";
 import Program from "./components/AdmissionInfo/UnderGraduate/Program";
 import NotFound from "./components/NotFound/NotFound"
+import AddCampaign from "./components/Admin/AddCampaign/AddCampaign";
+import ManageArticle from "./components/Admin/ManageArticle/ManageArticle";
+import ManageEvents from "./components/Admin/ManageEvents/ManageEvents";
+import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
+import Subscribers from "./components/Admin/Subscribers/Subscribers";
+import AddWebinarVideos from "./components/Admin/AddWebinarVideos/AddWebinarVideos";
 export const UserContext = createContext();
 
 function App() {
@@ -73,9 +79,24 @@ function App() {
           </Route>
 
           <Route path="/admin">
-            <Dashboard />
+            <MakeAdmin />
           </Route>
 
+          <Route path="/manageCampaign">
+            <AddCampaign />
+          </Route>
+          <Route path="/manageArticle">
+            <ManageArticle />
+          </Route>
+          <Route path="/manageEvents">
+            <ManageEvents />
+          </Route>
+          <Route path="/subscribers">
+            <Subscribers />
+          </Route>
+          <Route path="/addWebinarVideos">
+            <AddWebinarVideos />
+          </Route>
           <Route exact path="/">
             <LeadMain />
           </Route>

@@ -73,6 +73,7 @@ const Login = () => {
     }
 
     const handleSubmit = (e) => {
+        console.log(e)
         if(newUser && user.email && user.password) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
             .then((userCredential) => {

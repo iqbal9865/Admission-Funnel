@@ -16,3 +16,10 @@ li{
     /* border-bottom: 1px solid black ; */
     /* text-align: justify; */
 }
+.dashboard-link{
+    text-decoration: none;
+    color:white;
+}
+.dashboard-link:hover{
+    color: orange!important;
+}
