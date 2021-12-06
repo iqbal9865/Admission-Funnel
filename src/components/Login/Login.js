@@ -5,6 +5,10 @@ import firebaseConfig from './firebase.config'
 import { UserContext } from '../../App';
 import {Redirect, useHistory, useLocation} from "react-router-dom";
 // import { faBullseye } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faGoogle } from 'free-regular-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -151,7 +155,9 @@ const Login = () => {
                 {user.success && <p style={{color: 'green'}}>User {newUser ? 'Created' : 'Logged In'} Successfully</p>}
                 
                 <br/>  
-                <button onClick={handleGoogleSignIn}  style={{padding:'11px 36px',backgroundColor:'tomato', fontSize:'17px', fontWeight:'700',color:'white',border:'none'}} >SignUp Using Google</button>
+                <button onClick={handleGoogleSignIn}  style={{padding:'11px 36px',backgroundColor:'tomato', fontSize:'17px', fontWeight:'700',color:'white',border:'none'}} >SignUp Using Google 
+                {/* <FontAwesomeIcon className='mx-1' icon={faFacebook}/> */}
+                </button>
                 <br/>  <br/>
                
                

@@ -3,7 +3,7 @@ import SideBar from '../SideBar/SideBar';
 
 const AdmissionEligibility = () => {
     return (
-        <div className="row m-5">
+        <div className="row p-5">
         <div className="col-md-3 col-sm-12">
             <SideBar />
         </div>

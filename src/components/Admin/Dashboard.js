@@ -1,9 +1,12 @@
 import React from 'react';
-
+import AdminSideBar from './AdminSideBar/AdminSideBar'
 const Dashboard = () => {
     return (
-        <div>
-            <h1>Admin DashBoard</h1>
+        <div className="row ">
+
+            <div className="col-md-3 col-sm-12">
+                <AdminSideBar />
+            </div>
         </div>
     );
 };

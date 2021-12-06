@@ -1,0 +1,18 @@
+
+.admin-sidebar{
+    background-color: #23303F;
+}
+ul{
+    padding:10px;
+}
+li{
+    list-style: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: lightgrey;
+    cursor: pointer;
+    margin-bottom: 12px;
+    /* border-bottom: 1px solid black ; */
+    /* text-align: justify; */
+}

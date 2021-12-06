@@ -20,7 +20,7 @@ import Login from "./components/Login/Login"
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Dashboard from "./components/Admin/Dashboard";
 import Program from "./components/AdmissionInfo/UnderGraduate/Program";
-
+import NotFound from "./components/NotFound/NotFound"
 export const UserContext = createContext();
 
 function App() {
@@ -72,12 +72,15 @@ function App() {
             <Program />
           </Route>
 
-          <PrivateRoute path="/admin">
+          <Route path="/admin">
             <Dashboard />
-          </PrivateRoute>
+          </Route>
 
           <Route exact path="/">
             <LeadMain />
+          </Route>
+          <Route exact path="*">
+            <NotFound />
           </Route>
 
         </Switch>

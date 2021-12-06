@@ -24,11 +24,11 @@ const AdmissionOverview = () => {
 
                     <h3>Online submission</h3>
                     <p>
-                        <ul>
-                            <li>Go to XYZ University Website, go to admission, and then go to Apply Online.</li>
-                            <li>Fill- up the Admission Form.</li>
+                        <ul >
+                            <li style={{textAlign: 'left'}}>Go to XYZ University Website, go to admission, and then go to Apply Online.</li>
+                            <li style={{textAlign: 'left'}}>Fill- up the Admission Form.</li>
 
-                            <li>Submit the form online.</li>
+                            <li style={{textAlign: 'left'}}>Submit the form online.</li>
                         
                         </ul></p>
 
