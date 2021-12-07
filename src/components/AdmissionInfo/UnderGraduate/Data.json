@@ -1,45 +1,55 @@
+
 [
     {
+        "img": "https://i.ibb.co/S7Spssv/CSE.gif",
         "dept": "CSE",
         "title": "Department of CSE",
         "body": "Department of cse is ......"
     },
     {
+        "img": "https://i.ibb.co/VgxSpZy/EEE.gif",
         "dept":"EEE",
         "title": "Department of EEE",
         "body":"Department of eee is ......"
     },
     {
+        "img": "https://i.ibb.co/Bck7Ckv/CIVIL.gif",
         "dept":"CIVIL",
         "title": "Department of Civil",
         "body":"Department of Civil is ......"
     },
     {
+        "img": "https://i.ibb.co/VgxSpZy/EEE.gif",
         "dept":"Textile",
         "title": "Department of Textile",
         "body":"Department of Textile is ......"
     },
     {
+        "img": "https://i.ibb.co/VgxSpZy/EEE.gif",
         "dept":"English",
         "title": "Department of English",
         "body":"Department of English is ......"
     },
     {
+        "img": "https://i.ibb.co/mN70B02/BBA.gif",
         "dept":"BBA",
         "title": "Department of BBA",
         "body":"Department of BBA is ......"
     },
     {
+        "img": "https://i.ibb.co/VgxSpZy/EEE.gif",
         "dept":"Agriculture",
         "title": "Department of Agriculture",
         "body":"Department of Agriculture is ......"
     },
     {
+        "img": "https://i.ibb.co/ZN8LZzN/ME.gif",
         "dept":"LAW",
         "title": "Department of Law",
         "body":"Department of Law is ......"
     },
     {
+        "img": "https://i.ibb.co/ZN8LZzN/ME.gif",
         "dept":"Machanical",
         "title": "Department of Machanical",
         "body":"Department of Machanical is ......"

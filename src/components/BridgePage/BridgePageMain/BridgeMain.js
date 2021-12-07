@@ -7,6 +7,8 @@ import Videos from '../WebinarVideos/Videos';
 import Events from '../Events/Events';
 import BridgeMainCSS from './BridgePageMain.module.css';
 import {Link} from 'react-router-dom';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 const BridgeMain = () => {
     return (
         <div>
@@ -30,6 +32,11 @@ const BridgeMain = () => {
            
             <Testimonials />
             <button className='btn btn-warning p-2 m-2'> <Link style={{color:'black', textDecoration:'none'}} to="/admissionInfo">Admission Information</Link> </button>
+            <MessengerCustomerChat
+                pageId="104893022032193"                
+                appId="207350864898723"
+               
+             />
         </div>
     );
 };

@@ -133,10 +133,10 @@ const Login = () => {
  
 
     return(
-        <div className='row my-5 container m-auto'>
-            <div className="col-md-5 my-4" style={{textAlign:'justify'}}>
-                <h4 className='mt-2'>{newUser ? 'USER REGISTRATION' : 'LOGIN'}</h4>
-                <form onSubmit={handleSubmit}>
+        <div className=' my-5 container w-75 m-auto' style={{border:'1px solid gray', borderRadius:'2em'}}>
+            <div className=" m-5" style={{textAlign:'justify'}}>
+                <h4 className='pt-3'>{newUser ? 'USER REGISTRATION' : 'LOGIN'}</h4>
+                <form onSubmit={handleSubmit} >
                 <div className='form-group my-3 mt-4'>
                     <input type='checkbox' name="newUser" id='' onChange = {() => setNewUser(!newUser)} />
                     <label htmlFor=""><span style={{padding:'5px', fontWeight:'600'}}>New User Registration</span></label>

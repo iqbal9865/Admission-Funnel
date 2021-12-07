@@ -1,26 +1,30 @@
 import {useState} from 'react';
 
 import offerTwenty from '../../../images/twenty.gif';
-// import Admission from '../../../images/Admission.gif';
+import offerFifty from '../../../images/fifty.gif';
+import waiverThirty from '../../../images/thirty.gif';
+import waiverSixty from '../../../images/sixty.gif';
+
+//import Admission from '../../../images/Admission.gif';
 import Offer from './Offer';
 const offerInfo = [
     {
         id: 1,
-        img: offerTwenty,
+        img: offerFifty,
         name: '50% Offer For New Students',
-        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, odio.'
+        body: 'For New Admission'
     },
     {
         id:2,
-        img: offerTwenty,
-        name: '20% Offer For Existing Students',
-        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, odio.'
+        img: waiverThirty,
+        name: '30% Offer For Merit Scholarship',
+        body: 'For Results 3.60'
     },
     {
         id:3,
-        img: offerTwenty,
-        name: '30% For Merit Scholarship',
-        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, odio.'
+        img: waiverSixty,
+        name: '60% For Merit Scholarship',
+        body: 'For Results 4.00'
     }
 ]
 

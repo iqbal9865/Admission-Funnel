@@ -78,25 +78,25 @@ function App() {
             <Program />
           </Route>
 
-          <Route path="/admin">
+          <PrivateRoute path="/admin">
             <MakeAdmin />
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/manageCampaign">
+          <PrivateRoute path="/manageCampaign">
             <AddCampaign />
-          </Route>
-          <Route path="/manageArticle">
+          </PrivateRoute>
+          <PrivateRoute path="/manageArticle">
             <ManageArticle />
-          </Route>
-          <Route path="/manageEvents">
+          </PrivateRoute>
+          <PrivateRoute path="/manageEvents">
             <ManageEvents />
-          </Route>
-          <Route path="/subscribers">
+          </PrivateRoute>
+          <PrivateRoute path="/subscribers">
             <Subscribers />
-          </Route>
-          <Route path="/addWebinarVideos">
+          </PrivateRoute>
+          <PrivateRoute path="/addWebinarVideos">
             <AddWebinarVideos />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/">
             <LeadMain />
           </Route>

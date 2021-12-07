@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Offer = ( {offer} ) => {
+    console.log(offer)
     return (
         <div className="col-md-4 py-4">
             <div class="card  shadow" >
