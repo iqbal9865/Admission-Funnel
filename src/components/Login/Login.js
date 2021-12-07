@@ -3,6 +3,7 @@ import firebase from "firebase/compat/app"
 import "firebase/compat/auth";
 import firebaseConfig from './firebase.config'
 import { UserContext } from '../../App';
+import { useForm } from 'react-hook-form';
 import {Redirect, useHistory, useLocation} from "react-router-dom";
 // import { faBullseye } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,19 +19,18 @@ const Login = () => {
     let history = useHistory();
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
+    var googleProvider = new firebase.auth.GoogleAuthProvider();
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [newUser, setNewUser] = useState(false)
-    var googleProvider = new firebase.auth.GoogleAuthProvider();
-
     const [user, setUser] = useState({
-        isSignedIn : false,
-        name : '',
-        email : '',
-        password : '',
-        success: false,
-        error : '',
-        newUser: false
+        isSignedIn: false,
+        name: '',
+        email: '',
+        password: '',
+        photo: '',
+        error: '',
+        success: false
     })
 
     const handleGoogleSignIn = () => {
@@ -53,84 +53,83 @@ const Login = () => {
         console.log('errorCode: ',errorCode,errorMessage, email, credential)
         });
     }
+    const { register,  errors } = useForm();
+    const onSubmit = data => console.log(data);
 
-    const handleBlur = (e) => {
-        console.log(e.target.name, ":", e.target.value)
-        let isFieldValid;
-        if(e.target.name === 'email') {
-            isFieldValid = /^\S+@\S+\.\S+$/.test(e.target.value)
+    const handleBlur = (event) => {
+        let isFormValid = true;
+        if(event.target.name === 'email') {
+            isFormValid = /\S+@\S+\.\S+/.test(event.target.value)
+            
         }
-        if(e.target.name === 'password') {
-            const isPasswordValid = e.target.value.length > 6
-            const hasPasswordNumber = /\d{1}/.test(e.target.value)
-            isFieldValid = isPasswordValid && hasPasswordNumber;
+        if(event.target.name === 'password' || event.target.name === 'confirmPassword') {
+            const isPasswordValid = event.target.value.length >= 6;
+            const passwordHasNumber = /\d{1}/.test(event.target.value)
+            isFormValid =  isPasswordValid && passwordHasNumber;
         }
-        if(isFieldValid){
-            const newUserInfo = {...user};
-            newUserInfo[e.target.name] = e.target.value;
-            setUser(newUserInfo);
+        if(isFormValid){
+            const newUserInfo = {...user}
+            newUserInfo[event.target.name] = event.target.value;
+            setUser(newUserInfo) 
         }
     }
 
     const handleSubmit = (e) => {
-        console.log(e)
-        if(newUser && user.email && user.password) {
+        if(user.email && user.email) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-            .then((userCredential) => {
-              var user = userCredential.user;
-              const newUserInfo = {...user}
-              newUserInfo.success = true;
-              newUserInfo.error = '';
-              setUser(newUserInfo)
-              setLoggedInUser(newUserInfo)
-              updateUserInfo(user.name)
-              history.replace(from);
+            .then((user) => { 
+                const newUserInfo = {...user}
+                setUser(newUserInfo)  
+                setLoggedInUser(newUserInfo)
+                updateUserInfo(user.name)
+                newUserInfo.success = true;
+                newUserInfo.error = '';
+                history.replace(from);
+                
+                // var user = res.user;     
             })
             .catch((error) => {
-            
-              var errorMessage = error.message;
-              const newUserInfo = {...user}
-              newUserInfo.error = errorMessage;
-              newUserInfo.success = false;
-              setUser(newUserInfo)
-            });
-        }
-        if(!newUser && user.email && user.password) {
-            firebase.auth().signInWithEmailAndPassword(user.email, user.password)
-            .then((userCredential) => {
-                
-              var user = userCredential.user;
-              const newUserInfo = {...user}
-              newUserInfo.success = true;
-              newUserInfo.error = '';
-              setUser(newUserInfo)
-              setLoggedInUser(newUserInfo)
-              console.log('sign in user: ', user)
-              history.replace(from);
-            })
-            .catch((error) => {
-                
-              var errorMessage = error.message;
-              const newUserInfo = {...user}
-              newUserInfo.error = errorMessage;
-              newUserInfo.success = false;
-              setUser(newUserInfo)
+                const newUserInfo = {...user};
+                newUserInfo.success = false;
+                newUserInfo.error = error.message;
+                setUser(newUserInfo)
             });
         }
         e.preventDefault();
+        if(!newUser && user.email && user.password) {
+            firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+            .then((res) => {
+                const newUserInfo = {...user}
+                newUserInfo.error = '';
+                newUserInfo.success = true;
+                setUser(newUserInfo)
+                setLoggedInUser(newUserInfo)
+                history.replace(from);
+                // console.log('sign in user: ',res.user)
+                // var user = res.user;
+            })
+            .catch((error) => {
+                const newUserInfo = {...user};
+                newUserInfo.success = false;
+                newUserInfo.error = error.message;
+                setUser(newUserInfo)
+            });
+        }
     }
+    // const createNewUser = () => {
+    //     setNewUser(!newUser)
+    // }
     const updateUserInfo = (name) => {
         var user = firebase.auth().currentUser;
         user.updateProfile({
         displayName: name,
-        
+        // photoURL: "https://example.com/jane-q-user/profile.jpg"
         }).then(function() {
             console.log('user name updated successfully')
         }).catch(function(error) {
-            console.log('error:',error)
+            console.log('error',error)
         });
     }
- 
 
     return(
         <div className=' my-5 container w-75 m-auto' style={{border:'1px solid gray', borderRadius:'2em'}}>
@@ -160,7 +159,7 @@ const Login = () => {
                 {/* <FontAwesomeIcon className='mx-1' icon={faFacebook}/> */}
                 </button>
                 <br/>  <br/>
-               
+              
                
             </div>
             
