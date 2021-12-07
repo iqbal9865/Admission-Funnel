@@ -35,7 +35,6 @@ const BridgeMain = () => {
             <MessengerCustomerChat
                 pageId="104893022032193"                
                 appId="207350864898723"
-               
              />
         </div>
     );

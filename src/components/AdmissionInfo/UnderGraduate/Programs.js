@@ -11,7 +11,7 @@ const Programs = (props) => {
     
     return (
         <div className="col-md-4 py-1">
-            <div class="card" style={{width:'18em',cursor:'pointer'}} onClick={() => handleClick(dept)}>
+            <div class="card" style={{cursor:'pointer'}} onClick={() => handleClick(dept)}>
                 <div class="card-body">
                     <img src={img} alt="" className="w-100" />
                     <h5 class="card-title">Department of {dept}</h5>

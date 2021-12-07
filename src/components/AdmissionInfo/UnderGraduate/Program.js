@@ -7,12 +7,19 @@ const Program = () => {
     useEffect(() => {
         setDepartments(Data.find(dt => dt.dept === dept))
     },[])
-    const {title, body} = department;
+    const {title, body,img} = department;
     return (
-        <div>
-            <h1>Program {dept}</h1>
-            <h3>{title}</h3>
-            <h3>{body}</h3>
+        <div className="container-fluid p-5">
+           <div className="row">
+               <div className="col-md-6">
+                    <img src={img} alt="" className="img-fluid "  />
+               </div>
+               <div className="col-md-6" style={{textAlign:'justify'}}>
+                    <h1 className="my-3">{title}</h1>
+                    <h4>{body}</h4>
+               </div>
+               
+           </div>
          </div>   
     )
 }
