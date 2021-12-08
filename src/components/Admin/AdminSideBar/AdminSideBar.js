@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react';
+import React,{useState,useContext,useEffect} from 'react';
 import {UserContext} from '../../../App'
 import "./AdminSideBar.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,14 +15,25 @@ import { faUsersCog} from '@fortawesome/free-solid-svg-icons';
 import { faUser} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom'
 const AdminSideBar = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [isAdmin, setIsAdmin] = useState(false)
+    useEffect(() => {
+        fetch('http://localhost:5000/isAdmin', {
+            method: 'POST',
+            headers: {'content-type':'application/json'},
+            body: JSON.stringify({email : loggedInUser.email})
+        })
+        .then(response => response.json())
+        .then(data => setIsAdmin(data))
+    }, [])
+
     const [togglebtn, setTogglebtn] = useState(true)
     const handleToggle = () => {
         setTogglebtn(!togglebtn)
     }
     return (
         <div className="admin-sidebar">
-            <div className="p-4" >
+            {isAdmin && <div className="p-4" >
                 <div className="mx-2 " style={{color:'white'}}>
                     <div style={{border: '1px solid white'}} >
                         <p><strong className=""><FontAwesomeIcon className='mx-1 mt-2' icon={faUser}/>{loggedInUser.name}</strong></p>
@@ -45,7 +56,7 @@ const AdminSideBar = () => {
 
                 </ul>}
                
-            </div>
+            </div>}
         </div>
     );
 };
