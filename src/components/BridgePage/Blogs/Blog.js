@@ -22,11 +22,11 @@ const Blog = ({blog}) => {
         <div className='col-md-4 py-4'>
             <div class="card shadow p-4" >
                 <div className="">
-                  <h5 style={{fontWeight: 'bold'}} className="card-title">{blog.title}</h5> <span>{blog.author}</span>
+                  <h5 style={{fontWeight: 'bold'}} className="card-title">{blog.title}</h5> <span>{blog.name}</span>
                 </div>
                 
                 <div className="card-body">
-                    <p style={{textAlign: 'justify'}} className="card-text">{blog.content}</p>
+                    <p style={{textAlign: 'justify'}} className="card-text">{blog.body}</p>
                     
                 </div>
                 

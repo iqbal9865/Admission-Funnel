@@ -18,7 +18,7 @@ import BridgeMain from "./components/BridgePage/BridgePageMain/BridgeMain";
 import LeadMain from './components/LeadPage/LeadMain/LeadMain'
 import Login from "./components/Login/Login"
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Dashboard from "./components/Admin/Dashboard";
+// import Dashboard from "./components/Admin/Dashboard";
 import Program from "./components/AdmissionInfo/UnderGraduate/Program";
 import NotFound from "./components/NotFound/NotFound"
 import AddCampaign from "./components/Admin/AddCampaign/AddCampaign";
@@ -29,13 +29,14 @@ import Subscribers from "./components/Admin/Subscribers/Subscribers";
 import AddWebinarVideos from "./components/Admin/AddWebinarVideos/AddWebinarVideos";
 
 export const UserContext = createContext();
+// export const EmailContext = createContext();
 
 function App() {
-  
+  // const [email, setEmail] = useState({})
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <div className="App">
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}  >
       <Router>
         <Switch>
           

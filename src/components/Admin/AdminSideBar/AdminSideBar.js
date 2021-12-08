@@ -23,8 +23,10 @@ const AdminSideBar = () => {
     return (
         <div className="admin-sidebar">
             <div className="p-4" >
-                <div className="mx-2" style={{color:'white',textAlign:'left'}}>
-                    <p><strong className=""><FontAwesomeIcon className='mx-1' icon={faUser}/>{loggedInUser.name}</strong></p>
+                <div className="mx-2 " style={{color:'white'}}>
+                    <div style={{border: '1px solid white'}} >
+                        <p><strong className=""><FontAwesomeIcon className='mx-1 mt-2' icon={faUser}/>{loggedInUser.name}</strong></p>
+                    </div>
                 </div>
                 <button className='btn btn-dark d-sm-none' onClick={handleToggle}>==</button>
                 {togglebtn && <ul>
