@@ -21,7 +21,7 @@ const Testimonials = () => {
                             <div className="player-wrapper">
                                 <ReactPlayer  url="https://youtu.be/GNB-lK_cAXo" 
                                     className="react-player"
-                                    playing
+                                    playing = {false}
                                     // controls={false}
                                     autoPlay={false}
                                     autoStart={false}

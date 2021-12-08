@@ -5,6 +5,18 @@
     background-size: cover;
     padding:4em;
 }
-.regbtn:hover{
-    text-decoration:underline;
+.btnreg{
+    background-color: #FA9516;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    color: #23303F;
+    padding: 15px 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btnregh:hover{
+    background-color: #23303F;
+    color: aliceblue;
 }

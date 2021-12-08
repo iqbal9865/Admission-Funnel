@@ -4,6 +4,7 @@ import Blogs from '../Blogs/Blogs';
 import Offers from '../Offers/Offers';
 import Testimonials from '../Testimonials/Testimonials';
 import Videos from '../WebinarVideos/Videos';
+import UnlockAdmission from '../UnlockAdmission/UnlockAdmission';
 import Events from '../Events/Events';
 import BridgeMainCSS from './BridgePageMain.module.css';
 import {Link} from 'react-router-dom';
@@ -31,7 +32,7 @@ const BridgeMain = () => {
             </div>
            
             <Testimonials />
-            <button className='btn btn-warning p-2 m-2'> <Link style={{color:'black', textDecoration:'none'}} to="/admissionInfo">Admission Information</Link> </button>
+            <UnlockAdmission />
             <MessengerCustomerChat
                 pageId="104893022032193"                
                 appId="207350864898723"

@@ -7,7 +7,7 @@ const Video = ({video}) => {
             <div class="card shadow" >
                 <div className="">
                     <ReactPlayer url={video.url} className="react-player"
-                        playing
+                        playing = {false}
                         width="100%"
                         height="100%"
                         autoPlay={false}

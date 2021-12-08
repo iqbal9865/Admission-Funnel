@@ -34,7 +34,7 @@ const BridgeTop = () => {
                 <h1 className='py-4' style={{fontWeight:'700',color:'#FA9516'}}>A LIVE WEBINAR SESSION IS UPCOMING!</h1>
                 <h5 style={{fontWeight:'700'}}>JOIN THE WEBINAR TO CONNECT WITH US MORE CLOSSER</h5> 
                         
-                <button onClick={openModal} className={`btn p-2 my-2 ${BridgeTopCSS.regbtn}`} style={{color:"black", backgroundColor:'#FA9516', fontWeight:'700',fontSize:'19px',border:'none'}}>REGISTRATION NOW</button>
+                <button onClick={openModal} className={`my-3 ${BridgeTopCSS.btnreg} ${BridgeTopCSS.btnregh}`}>REGISTRATION NOW</button>
                 <Registration modalIsOpen={modalIsOpen} closeModal={closeModal} />
               </div>
           </div>

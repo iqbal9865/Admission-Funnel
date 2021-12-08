@@ -1,0 +1,13 @@
+.btnUnlock {
+    background-color: #FA9516;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    color: #23303F;
+    padding: 15px 50px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btnUnlock:hover {
+    background-color: #ffffff;
+  }
