@@ -27,7 +27,8 @@ import ManageEvents from "./components/Admin/ManageEvents/ManageEvents";
 import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 import Subscribers from "./components/Admin/Subscribers/Subscribers";
 import AddWebinarVideos from "./components/Admin/AddWebinarVideos/AddWebinarVideos";
-
+import WebinarRegistration from './components/Admin/WebinarRegistration/WebinarRegistration'
+import ManageAdmission from './components/Admin/ManageAdmission/ManageAdmission'
 export const UserContext = createContext();
 // export const EmailContext = createContext();
 
@@ -99,6 +100,14 @@ function App() {
           <PrivateRoute path="/addWebinarVideos">
             <AddWebinarVideos />
           </PrivateRoute>
+          <PrivateRoute path="/manageAdmission">
+            <ManageAdmission />
+          </PrivateRoute>
+
+          <PrivateRoute path="/webinarRegistration">
+            <WebinarRegistration />
+          </PrivateRoute>
+
           <Route exact path="/">
             <LeadMain />
           </Route>

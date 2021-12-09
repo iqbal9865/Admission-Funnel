@@ -1,10 +1,15 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import BridgeTopCSS from './BridgeTop.module.css'
 // import Typical from 'react-typical'
 import Registration from '../WebinarReg/Registration'
 
 const BridgeTop = () => {
-
+  const [campaigns, setCampaigns] = useState([])
+  useEffect(() => {
+    fetch('http://localhost:5000/campaigns')
+    .then(res => res.json())
+    .then(data => setCampaigns(data))
+  },[])
   const [modalIsOpen,setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
@@ -33,8 +38,17 @@ const BridgeTop = () => {
 
                 <h1 className='py-4' style={{fontWeight:'700',color:'#FA9516'}}>A LIVE WEBINAR SESSION IS UPCOMING!</h1>
                 <h5 style={{fontWeight:'700'}}>JOIN THE WEBINAR TO CONNECT WITH US MORE CLOSSER</h5> 
+                  <div>
+                    {
+                      campaigns.map(campaign => <div>
+                        <h5>{campaign.campaignName}</h5>
+                        <p>{campaign.time} AM, {campaign.date}</p>
                         
-                <button onClick={openModal} className={`my-3 ${BridgeTopCSS.btnreg} ${BridgeTopCSS.btnregh}`}>REGISTRATION NOW</button>
+                      </div>)
+                    }
+                   
+                  </div>
+                <button onClick={openModal} className={`my-1 ${BridgeTopCSS.btnreg} ${BridgeTopCSS.btnregh}`}>REGISTRATION NOW</button>
                 <Registration modalIsOpen={modalIsOpen} closeModal={closeModal} />
               </div>
           </div>

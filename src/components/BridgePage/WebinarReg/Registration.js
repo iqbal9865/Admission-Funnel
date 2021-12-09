@@ -17,27 +17,26 @@ Modal.setAppElement('#root')
 const Registration = ({modalIsOpen,closeModal}) => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+
     const onSubmit = (data) => {
         console.log(data)
-
-        // date.service = appointmentOn;
-        // data.date = date;
-        // data.created = new Date();
-
-        // fetch('https://royal-syrup-45263.herokuapp.com/addAppointment', {
-        // method : 'POST',
-        // headers: {'content-type':'application/json'},
-        // body: JSON.stringify(data)
-        // })
-        // .then(res => res.json())
-        // .then(success => {
-        //   if(success) {
-            closeModal()
-            alert('Registration Successfull!');
-        //   }
-        // })
-
-
+        const eventData = {
+          name: data.name,
+          phone: data.phone,
+          study: data.study
+      
+      };
+      const url = `http://localhost:5000/addWebReg`
+      console.log('eventData')
+      fetch(url, {
+          method: 'POST',
+          headers: {
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(eventData)
+      })
+      .then(res => res.json())
+      closeModal()
     }
     return (
         <div>
@@ -58,7 +57,7 @@ const Registration = ({modalIsOpen,closeModal}) => {
             {errors.name && <span className="text-danger">This field is required</span>}
           </div>
           <div className='form-group my-3'>
-            <input className='form-control' placeholder='Enter Your Phone' {...register("phone" )} /> 
+            <input className='form-control' placeholder='Enter Your Phone' type='number' {...register("phone" )} /> 
             {errors.phone && <span className="text-danger">This field is required</span>}
           </div>
           
