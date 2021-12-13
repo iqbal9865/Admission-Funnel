@@ -5,7 +5,7 @@ const AdmissionOverview = () => {
    document.title = "Admission Overview - XYZ University"
     return (
        
-        <div className="" style={{backgroundColor:'#23303F', color:'white'}}>
+        <div className="" style={{color:'black'}}>
             <div className='row p-5' >
                 
                 <div className='col-md-3 col-sm-12'>
@@ -24,11 +24,11 @@ const AdmissionOverview = () => {
 
                     <h3>Online submission</h3>
                     <p>
-                        <ul >
-                            <li style={{textAlign: 'left'}}>Go to XYZ University Website, go to admission, and then go to Apply Online.</li>
-                            <li style={{textAlign: 'left'}}>Fill- up the Admission Form.</li>
+                        <ul>
+                            <li style={{textAlign: 'left', color: 'black'}}>Go to XYZ University Website, go to admission, and then go to Apply Online.</li>
+                            <li style={{textAlign: 'left', color: 'black'}}>Fill- up the Admission Form.</li>
 
-                            <li style={{textAlign: 'left'}}>Submit the form online.</li>
+                            <li style={{textAlign: 'left', color: 'black'}}>Submit the form online.</li>
                         
                         </ul></p>
 
