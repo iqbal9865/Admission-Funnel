@@ -4,7 +4,9 @@ const btnStyle = {
     color:'white',
     margin:'5px'
 }
-const Subscriber = ({subscribers}) => {
+const Subscriber = ({subscribers,deleteSubscriber}) => {
+    // const [manage, setManage] = useState([])
+   
     return (
         <div className="">
             
@@ -20,7 +22,7 @@ const Subscriber = ({subscribers}) => {
                             <tr>
                                 <td className="my-2">{subscriber.email}</td>
                               
-                                <button style={{color:'black'}} className="btn btn-danger my-2">Delete</button>
+                                <button style={{color:'black'}} className="btn btn-danger my-2" onClick={() => deleteSubscriber(subscriber._id)}>Delete</button>
                              </tr>   
                         )
                     }
