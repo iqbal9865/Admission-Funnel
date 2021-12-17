@@ -11,6 +11,7 @@ const SendEmail = () => {
                 <form className="form-group">
                   
                     <input type='email' className='form-control' name='email' placeholder='Enter Email' /> <br/>
+                    <input type='text' className='form-control' name='subject' placeholder='Email Subject' /> <br/>
                     <textarea type='text' row='3' className='form-control' name='text' placeholder="Write Here..." /> <br />
                     <input style={{backgroundColor:'#23303F',color:'white'}} type='submit' value='Send Email' className='form-control' />
                 </form>
