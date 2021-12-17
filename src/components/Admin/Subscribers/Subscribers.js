@@ -15,10 +15,7 @@ const Subscribers = () => {
             </div>
             <div className="col-md-8 p-5">
             <h2  className="pb-3" style={{textAlign:'left'}}>Our Subscribers</h2>
-            
-            {
-                subscribers.map(subscriber => <Subscriber subscriber={subscriber} />)
-            }
+            <Subscriber subscribers={subscribers}/>
             </div>
         </div>
     );

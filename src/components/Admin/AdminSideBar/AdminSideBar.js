@@ -45,13 +45,15 @@ const AdminSideBar = () => {
                     <li style={{textAlign: 'left'}} className="py-2"><FontAwesomeIcon className='mx-1' icon={faFileSignature}/><Link className='dashboard-link' to="/manageAdmission"> Manage Admission</Link></li>
                     <li style={{textAlign: 'left'}} className="py-2"><FontAwesomeIcon className='mx-1' icon={faUserFriends}/><Link to="/subscribers" className="dashboard-link"> Manage Subscriber</Link></li>
                     <li style={{textAlign: 'left'}} className="py-2"><FontAwesomeIcon className='mx-1' icon={faVideo}/> <Link to="/addWebinarVideos" className="dashboard-link"> Add Webinar Video</Link></li>
-                    <li style={{textAlign: 'left'}} className="py-2"><FontAwesomeIcon className='mx-1' icon={faEnvelopeSquare}/> E-mail Automations</li>
+                   
                     <li style={{textAlign: 'left'}} className="py-2"> <FontAwesomeIcon className='mx-1' icon={faCalendarWeek}/> <Link className="dashboard-link" to="/manageCampaign">Manage Campaigns</Link> </li>
-                    <li style={{textAlign: 'left'}} className="py-2"><FontAwesomeIcon className='mx-1' icon={faBlog}/> <Link className="dashboard-link" to="/manageArticle">Manage Articles</Link></li>
-                    
-                    <li style={{textAlign: 'left'}} className="py-2"> <FontAwesomeIcon className='mx-1' icon={faCalendarPlus}/><Link className="dashboard-link" to="/manageEvents"> Manage Events</Link></li>
+                   
                     <li style={{textAlign: 'left'}} className="py-2"><FontAwesomeIcon className='mx-1' icon={faFileVideo}/><Link to="/webinarRegistration" className="dashboard-link"> Webinar Registration</Link></li>
+                    <li style={{textAlign: 'left'}} className="py-2"><FontAwesomeIcon className='mx-1' icon={faBlog}/> <Link className="dashboard-link" to="/manageArticle">Manage Articles</Link></li>
+                    <li style={{textAlign: 'left'}} className="py-2"> <FontAwesomeIcon className='mx-1' icon={faCalendarPlus}/><Link className="dashboard-link" to="/manageEvents"> Manage Events</Link></li>
+                   
                     <li style={{textAlign: 'left'}} className="py-2"> <FontAwesomeIcon className='mx-1' icon={faUsersCog}/><Link to='/admin' className="dashboard-link">  Make an Admin </Link></li>
+                    <li style={{textAlign: 'left'}} className="py-2"><FontAwesomeIcon className='mx-1' icon={faEnvelopeSquare}/><Link to='/sendEmail' className="dashboard-link"> Send Email</Link></li>
                     <li style={{textAlign: 'left'}} className="pt-md-3 mt-md-2 pt-sm-none mt-sm-none" id="logout"><Link to="/" className="dashboard-link"><FontAwesomeIcon className='mx-1' icon={faSignOutAlt}/>Log Out </Link></li>
 
                 </ul>}

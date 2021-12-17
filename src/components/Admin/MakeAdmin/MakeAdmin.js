@@ -35,11 +35,8 @@ const MakeAdmin = () => {
            body : JSON.stringify(eventData)
        })
        .then(res => res.json())
-       .then(success => {
-           if(success){
-               alert("Admin Uploaded Successfully!")
-           }
-       })
+       .then(data => console.log(data))
+       alert('Added Admin')
     }
 
     return (

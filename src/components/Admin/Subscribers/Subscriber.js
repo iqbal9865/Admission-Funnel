@@ -4,21 +4,26 @@ const btnStyle = {
     color:'white',
     margin:'5px'
 }
-const Subscriber = ({subscriber}) => {
+const Subscriber = ({subscribers}) => {
     return (
         <div className="">
             
-            <table class="table table-hover"  >
-               
-                <tbody>
+            <table class="table">
+                <thead>
                     <tr>
-                    
-                        <td> <strong> {subscriber.email} </strong></td>
-                        <button className="btn" style={btnStyle}>Delete</button>
-
+                        <th scope="col">Email</th>
                     </tr>
-                    
-                 
+                </thead>
+                <tbody>
+                    {
+                        subscribers.map(subscriber => 
+                            <tr>
+                                <td className="my-2">{subscriber.email}</td>
+                              
+                                <button style={{color:'black'}} className="btn btn-danger my-2">Delete</button>
+                             </tr>   
+                        )
+                    }
                 </tbody>
                 </table>
         </div>

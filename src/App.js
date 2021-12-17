@@ -5,6 +5,7 @@ import {
   Route,
   //Link
 } from "react-router-dom";
+//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
 import './App.css';
 import { createContext, useState } from 'react';
 import AdmissionEligibility from "./components/AdmissionInfo/AdmissionEligibility/AdmissionEligibility";
@@ -29,6 +30,7 @@ import Subscribers from "./components/Admin/Subscribers/Subscribers";
 import AddWebinarVideos from "./components/Admin/AddWebinarVideos/AddWebinarVideos";
 import WebinarRegistration from './components/Admin/WebinarRegistration/WebinarRegistration'
 import ManageAdmission from './components/Admin/ManageAdmission/ManageAdmission'
+import SendEmail from './components/Admin/SendEmail/SendEmail'
 export const UserContext = createContext();
 // export const EmailContext = createContext();
 
@@ -84,7 +86,9 @@ function App() {
           <PrivateRoute path="/admin">
             <MakeAdmin />
           </PrivateRoute>
-
+          <PrivateRoute path="/sendEmail">
+            <SendEmail />
+          </PrivateRoute>
           <PrivateRoute path="/manageCampaign">
             <AddCampaign />
           </PrivateRoute>
