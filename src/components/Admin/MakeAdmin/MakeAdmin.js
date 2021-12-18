@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     // const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [isAdmin, setIsAdmin] = useState(false)
     useEffect(() => {
-        fetch('http://localhost:5000/isAdmin', {
+        fetch('https://cryptic-stream-76661.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: {'content-type':'application/json'},
             body: JSON.stringify({email : loggedInUser.email})
@@ -29,7 +29,7 @@ const MakeAdmin = () => {
         }
 
        console.log(eventData)
-       fetch('http://localhost:5000/addAdmin', {
+       fetch('https://cryptic-stream-76661.herokuapp.com/addAdmin', {
            method: 'POST',
            headers : {'content-type': 'application/json'},
            body : JSON.stringify(eventData)

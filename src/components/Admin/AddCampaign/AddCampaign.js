@@ -12,7 +12,7 @@ const AddCampaign = () => {
             time: data.time
             
         };
-        const url = `http://localhost:5000/addCampaigns`
+        const url = `https://cryptic-stream-76661.herokuapp.com/addCampaigns`
         console.log('eventData')
         fetch(url, {
             method: 'POST',

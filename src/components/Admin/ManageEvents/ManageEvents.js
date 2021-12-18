@@ -17,7 +17,7 @@ const ManageEvents = () => {
             weight: data.weight,
             imageURL: imageURL
         };
-        const url = `http://localhost:5000/addEvents`
+        const url = `https://cryptic-stream-76661.herokuapp.com/addEvents`
         console.log('eventData')
         fetch(url, {
             method: 'POST',

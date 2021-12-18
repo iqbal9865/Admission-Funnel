@@ -10,7 +10,7 @@ const ManageArticle = () => {
     const {register, handleSubmit, error} = useForm();
     const [articles, setArticles] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://cryptic-stream-76661.herokuapp.com/blogs')
         .then(res => res.json())
         .then(data => setArticles(data))
     },[])
@@ -23,7 +23,7 @@ const ManageArticle = () => {
         }
 
        console.log(eventData)
-       fetch('http://localhost:5000/addBlogs', {
+       fetch('https://cryptic-stream-76661.herokuapp.com/addBlogs', {
            method: 'POST',
            headers : {'content-type': 'application/json'},
            body : JSON.stringify(eventData)
@@ -35,7 +35,7 @@ const ManageArticle = () => {
 
     const deleteArticle = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/deleteArticle/${id}`,{
+        fetch(`https://cryptic-stream-76661.herokuapp.com/deleteArticle/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

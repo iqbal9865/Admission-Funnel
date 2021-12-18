@@ -5,14 +5,14 @@ const Subscribers = () => {
     const [subscribers, setSubscribers] = useState([])
 
     useEffect ( () => {
-        fetch(`http://localhost:5000/subscribers`)
+        fetch(`https://cryptic-stream-76661.herokuapp.com/subscribers`)
         .then(res=>res.json())
         .then(data=> setSubscribers(data))
     },[])
 
     const deleteSubscriber =(id) => {
         console.log(id)
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://cryptic-stream-76661.herokuapp.com/delete/${id}`,{
             method:'DELETE'
         })
         .then(res => res.json())

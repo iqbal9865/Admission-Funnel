@@ -3,7 +3,7 @@ import AdminSideBar from '../AdminSideBar/AdminSideBar'
 const ManageAdmission = () => {
     const [admitStudents, setAdmitStudents] = useState([])
     useEffect(()=> {
-        fetch('http://localhost:5000/onlineAdmission')
+        fetch('https://cryptic-stream-76661.herokuapp.com/onlineAdmission')
         .then(res => res.json())
         .then(data => setAdmitStudents(data))
     },[])

@@ -12,7 +12,7 @@ const OptinForm = () => {
     const onSubmit = data => {
         
         
-        // const url = `http://localhost:5000/addSubscribers`
+        // const url = `https://cryptic-stream-76661.herokuapp.com/addSubscribers`
         // fetch(url, {
         //     method: 'POST',
         //     headers: {
@@ -22,7 +22,7 @@ const OptinForm = () => {
         // })
         // .then(res => console.log('server side response: ',res))
         //     console.log("email:",data.email)
-        fetch('http://localhost:5000/addSubscribers', {
+        fetch('https://cryptic-stream-76661.herokuapp.com/addSubscribers', {
             method: 'POST',
             headers : {'content-type': 'application/json'},
             body : JSON.stringify(data)

@@ -4,14 +4,14 @@ import RegisterPeople from './RegisterPeople'
 const WebinarRegistration = () => {
     const [registrations, setRegistration] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/webinarRegistration')
+        fetch('https://cryptic-stream-76661.herokuapp.com/webinarRegistration')
         .then(res => res.json())
         .then(data => setRegistration(data))
     },[])
 
     const deleteRegister =(id) => {
         console.log(id)
-        fetch(`http://localhost:5000/deleteWebReg/${id}`,{
+        fetch(`https://cryptic-stream-76661.herokuapp.com/deleteWebReg/${id}`,{
             method: 'DELETE',
         })
         .then(res => res.json())

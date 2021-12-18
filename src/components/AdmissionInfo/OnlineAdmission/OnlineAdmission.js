@@ -58,7 +58,7 @@ const OnlineAdmission = () => {
             applicantSignature: data.applicantSignature
             
         };
-        const url = `http://localhost:5000/addOnlineAdmission`
+        const url = `https://cryptic-stream-76661.herokuapp.com/addOnlineAdmission`
         console.log('eventData')
         fetch(url, {
             method: 'POST',

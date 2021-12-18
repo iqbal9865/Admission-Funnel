@@ -6,7 +6,7 @@ import Registration from '../WebinarReg/Registration'
 const BridgeTop = () => {
   const [campaigns, setCampaigns] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/campaigns')
+    fetch('https://cryptic-stream-76661.herokuapp.com/campaigns')
     .then(res => res.json())
     .then(data => setCampaigns(data))
   },[])

@@ -26,7 +26,7 @@ const Registration = ({modalIsOpen,closeModal}) => {
           study: data.study
       
       };
-      const url = `http://localhost:5000/addWebReg`
+      const url = `https://cryptic-stream-76661.herokuapp.com/addWebReg`
       console.log('eventData')
       fetch(url, {
           method: 'POST',
