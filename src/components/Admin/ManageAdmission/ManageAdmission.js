@@ -19,7 +19,7 @@ const ManageAdmission = () => {
                     <tr>
                     
                     <th scope="col">Name</th>  
-                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
                     <th scope="col">YEAR</th>
                     <th scope="col">Semester</th>
                     <th scope="col">Department</th>
@@ -33,7 +33,7 @@ const ManageAdmission = () => {
                         admitStudents.map(registration => 
                             <tr>
                                 <td className="my-2">{registration.name}</td>
-                                <td className="my-2 ">{registration.email}</td>
+                                <td className="my-2 ">{registration.mobileNumber}</td>
                                 <td className="my-2 ">{registration.academicYear}</td>
                                 <td className="my-2 ">{registration.semsester}</td>
                                 <td className="my-2 ">{registration.department}</td>

@@ -231,18 +231,7 @@ const OnlineAdmission = () => {
                     </div>
                 </div>
 
-                {/* <div className="row" style={{marginTop: "20px"}}>
-                    <div className="d-flex">
-                    <div className="col-sm-12 col-md-6 form-group" style={{paddingRight: "30px"}}>
-                        <label for="mobile" style={{marginBottom: "10px"}}>Mobile:</label>
-                        <input Placeholder="Enter Your Mobile number" className="form-control" autoComplete={false} {...register("mobile_number")} required />
-                    </div>
-                        <div className="col-sm-12 col-md-6 form-group" style={{paddingLeft: "30px"}}>
-                            <label for="email" style={{marginBottom: "10px"}}>E-mail:</label>
-                            <input Placeholder="Enter Your Email Address" className="form-control" autoComplete={false} {...register("email")} required />
-                        </div>
-                    </div>
-                </div> */}
+              
 
                 <h1 style={{marginTop: "50px"}}>Academic Qualification:</h1>
                 <h4>SSC:</h4>
