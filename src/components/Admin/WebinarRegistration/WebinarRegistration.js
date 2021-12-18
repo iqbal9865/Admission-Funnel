@@ -8,6 +8,19 @@ const WebinarRegistration = () => {
         .then(res => res.json())
         .then(data => setRegistration(data))
     },[])
+
+    const deleteRegister =(id) => {
+        console.log(id)
+        fetch(`http://localhost:5000/deleteWebReg/${id}`,{
+            method: 'DELETE',
+        })
+        .then(res => res.json())
+        .then(res => {
+            console.log('delete: ',id)
+        })
+        setRegistration(registrations.filter(registration => registration._id !== id))
+    }
+
     return (
         <div className="row">
             <div className="col-md-3">
@@ -17,7 +30,7 @@ const WebinarRegistration = () => {
                 
                 <h3 style={{textAlign: 'left',fontWeight:'700'}} className="pb-3">Registration For Webinar</h3>
 
-                 <RegisterPeople registrations={registrations} />
+                {registrations.length ? <RegisterPeople registrations={registrations} deleteRegister={deleteRegister} /> : 'No Register Yet'}
            
             </div>
         </div>

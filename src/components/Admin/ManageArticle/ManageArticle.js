@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import AdminSideBar from '../AdminSideBar/AdminSideBar';
 import {useForm} from 'react-hook-form';
+import ArticleList from './ArticleList'
 const btnColor = {
     backgroundColor:'#23303F',
     color:'white'
@@ -31,6 +32,20 @@ const ManageArticle = () => {
        .then(data => console.log(data))
        alert('Article Updated!')
     }
+
+    const deleteArticle = (id) => {
+        console.log(id)
+        fetch(`http://localhost:5000/deleteArticle/${id}`,{
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+        setArticles(articles.filter(article => article._id !== id))
+    }
+
+    
     return (
         <div className="row">
             <div className="col-md-3">
@@ -54,31 +69,12 @@ const ManageArticle = () => {
                 <div className="article-container pt-5" style={{textAlign:'justify'}}>
                     <h2>All Articles</h2>
 
-                    {
-                        articles.map(article => <div>
-                           <div className='d-flex m-3'>
-                             <h5>{article.title}</h5>
-                             <button className="btn mx-2" style={btnColor}> EDIT</button>
-                             <button className="btn mx-2" style={btnColor}>DELETE</button>
-                           </div>
-                           
-                        </div>)
+                    {articles.length ?
+                        <ArticleList articles={articles} deleteArticle={deleteArticle} />
+                    :
+                    'No Articles Write Yet'
                     }
-                    {/* <div className="article d-flex my-2">
-                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</h5>
-                        <button className="btn mx-2" style={btnColor}>Edit</button>
-                        <button className="btn mx-2" style={btnColor}>Delete</button>
-                    </div>
-                    <div className="article d-flex my-2">
-                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</h5>
-                        <button className="btn  mx-2" style={btnColor}>Edit</button>
-                        <button className="btn mx-2" style={btnColor}>Delete</button>
-                    </div>
-                    <div className="article d-flex">
-                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</h5>
-                        <button className="btn  mx-2" style={btnColor}>Edit</button>
-                        <button className="btn  mx-2" style={btnColor}>Delete</button>
-                    </div> */}
+                  
                 </div>
             </div>
             

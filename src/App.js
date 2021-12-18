@@ -19,7 +19,6 @@ import BridgeMain from "./components/BridgePage/BridgePageMain/BridgeMain";
 import LeadMain from './components/LeadPage/LeadMain/LeadMain'
 import Login from "./components/Login/Login"
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-// import Dashboard from "./components/Admin/Dashboard";
 import Program from "./components/AdmissionInfo/UnderGraduate/Program";
 import NotFound from "./components/NotFound/NotFound"
 import AddCampaign from "./components/Admin/AddCampaign/AddCampaign";
@@ -32,10 +31,10 @@ import WebinarRegistration from './components/Admin/WebinarRegistration/WebinarR
 import ManageAdmission from './components/Admin/ManageAdmission/ManageAdmission'
 import SendEmail from './components/Admin/SendEmail/SendEmail'
 export const UserContext = createContext();
-// export const EmailContext = createContext();
+
 
 function App() {
-  // const [email, setEmail] = useState({})
+ 
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <div className="App">

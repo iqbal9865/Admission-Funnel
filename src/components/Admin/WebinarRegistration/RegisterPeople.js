@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RegisterPeople = ({registrations}) => {
+const RegisterPeople = ({registrations,deleteRegister}) => {
     return (
         <div>
             <table class="table">
@@ -19,7 +19,7 @@ const RegisterPeople = ({registrations}) => {
                                 <td className="my-2">{registration.name}</td>
                                 <td className="my-2">{registration.phone}</td>
                                 <td className="my-2 ">{registration.study}</td>
-                                <button style={{color:'black'}} className="btn btn-danger my-2">Delete</button>
+                                <button style={{color:'black'}} className="btn btn-danger my-2" onClick={() => deleteRegister(registration._id)} >Delete</button>
                              </tr>   
                         )
                     }

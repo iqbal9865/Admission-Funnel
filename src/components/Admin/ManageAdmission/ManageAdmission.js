@@ -13,7 +13,7 @@ const ManageAdmission = () => {
                 <AdminSideBar />
             </div>
             <div className="col-md-9 py-5">
-                <h2 style={{textAlign:'left', fontWeight:'700'}} className='mb-3'>Admitted Students</h2>
+                <h2 style={{textAlign:'left', fontWeight:'700'}} className='mb-3'>Applicant Students</h2>
                 <table class="table">
                 <thead>
                     <tr>
@@ -25,7 +25,7 @@ const ManageAdmission = () => {
                     <th scope="col">Department</th>
                     <th scope="col">SSC GPA</th>
                     <th scope="col">HSC GPA</th>
-                    <th scope="col">Manage</th>
+                    {/* <th scope="col">Manage</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -39,8 +39,8 @@ const ManageAdmission = () => {
                                 <td className="my-2 ">{registration.department}</td>
                                 <td className="my-2 ">{registration.sscGpa}</td>
                                 <td className="my-2 ">{registration.hscGpa}</td>
-                                <button style={{color:'black'}} className="btn btn-success my-2">Accept</button>
-                                <button style={{color:'black'}} className="btn btn-danger my-2">Reject</button>
+                                {/* <button style={{color:'black'}} className="btn btn-success my-2">Accept</button>
+                                <button style={{color:'black'}} className="btn btn-danger my-2">Reject</button> */}
                              </tr>   
                         )
                     }
