@@ -32,11 +32,14 @@ const BridgeMain = () => {
             </div>
            
             <Testimonials />
-            <UnlockAdmission />
-            <MessengerCustomerChat
+
+            <MessengerCustomerChat className="fb-customerchat"
                 pageId="104893022032193"                
                 appId="207350864898723"
              />
+
+            <UnlockAdmission />
+           
         </div>
     );
 };
