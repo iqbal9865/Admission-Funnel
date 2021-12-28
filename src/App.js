@@ -85,9 +85,11 @@ function App() {
           <PrivateRoute path="/admin">
             <MakeAdmin />
           </PrivateRoute>
+
           <PrivateRoute path="/sendEmail">
             <SendEmail />
           </PrivateRoute>
+          
           <PrivateRoute path="/manageCampaign">
             <AddCampaign />
           </PrivateRoute>

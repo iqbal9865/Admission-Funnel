@@ -1,6 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { useForm } from "react-hook-form";
+
+
+
 const customStyles = {
     content : {
       top                   : '50%',
@@ -12,6 +15,7 @@ const customStyles = {
       padding               : '60px'
     }
 };
+
 Modal.setAppElement('#root')
 
 const Registration = ({modalIsOpen,closeModal}) => {

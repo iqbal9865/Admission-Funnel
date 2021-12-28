@@ -8,9 +8,13 @@ import UnlockAdmission from '../UnlockAdmission/UnlockAdmission';
 import Events from '../Events/Events';
 import BridgeMainCSS from './BridgePageMain.module.css';
 import {Link} from 'react-router-dom';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
-
+// import MessengerCustomerChat from 'react-messenger-customer-chat';
+// import SignIn from '../LiveChat/SignIn'
+// import Chat from '../LiveChat/Chat'
+// import {useAuthState} from 'react-firebase-hooks/auth'
+// import {auth} from '../LiveChat/firebase'
 const BridgeMain = () => {
+    // const [user] = useAuthState(auth)
     return (
         <div>
             <BridgeTop />
@@ -33,10 +37,15 @@ const BridgeMain = () => {
            
             <Testimonials />
 
-            <MessengerCustomerChat className="fb-customerchat"
+            {/* <MessengerCustomerChat className="fb-customerchat"
                 pageId="104893022032193"                
                 appId="207350864898723"
-             />
+             /> */}
+             {/* <div style={{borderRadius:'1em', backgroundColor:'#23303F'}}  className="container my-3">
+             {
+                 user ? <Chat /> : <SignIn />
+             }
+             </div> */}
 
             <UnlockAdmission />
            

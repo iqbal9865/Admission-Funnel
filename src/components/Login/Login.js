@@ -132,6 +132,8 @@ const Login = () => {
     }
 
     return(
+
+        
         <div className=' my-5 container w-75 m-auto' style={{border:'1px solid gray', borderRadius:'2em'}}>
             <div className=" m-5" style={{textAlign:'justify'}}>
                 <h4 className='pt-3'>{newUser ? 'USER REGISTRATION' : 'LOGIN'}</h4>
@@ -156,7 +158,7 @@ const Login = () => {
                 
                 <br/>  
                 <button onClick={handleGoogleSignIn}  style={{padding:'11px 36px',backgroundColor:'tomato', fontSize:'17px', fontWeight:'700',color:'white',border:'none'}} >SignUp Using Google 
-                {/* <FontAwesomeIcon className='mx-1' icon={faFacebook}/> */}
+                
                 </button>
                 <br/>  <br/>
               
