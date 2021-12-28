@@ -39,9 +39,10 @@ const Payments = () => {
                 <SideBar />
             </div>
             <div className='offset-md-1 col-md-6 col-sm-12 px-lg-5 py-3' style={{backgroundColor:'lightgray'}}> 
+            
                 <form action="" onSubmit={handleSubmit(onSubmit)}  >
-                   
-                <div className="row pt-5" style={{marginTop: "20px"}}>
+                <p style={{marginTop:'10px',fontWeight:'700',textAlign:'justify'}}>Send Money to 01755837019 and complete your payment by fill up this form, We will notify you within 30 minutes.</p>
+                <div className="row" style={{marginTop: "20px"}}>
                     <div className="d-flex">
                         <div className="col-sm-12 col-md-12 form-group">
                             <p style={{marginBottom: "10px",textAlign:'left'}}><label for="Payment_Via" >Payment Using For...</label></p>
@@ -71,6 +72,7 @@ const Payments = () => {
                         <input type="submit" className="form-control" style={{backgroundColor:'#FA9516',borderRadius:'0'}} /> 
                     </div>
                 </form>
+                
             </div>
         </div>
     )

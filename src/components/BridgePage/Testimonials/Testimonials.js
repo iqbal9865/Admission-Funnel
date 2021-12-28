@@ -15,7 +15,7 @@ const Testimonials = () => {
                 <div style={{backgroundColor: '#23303F',border:'10px solid #FA9516',borderRadius:'1em',color:'white'}} className="col px-md-3 col-md-8">
                     <div className="p-3 py-5">
                         <div className="py-4">
-                            <h1 style={{fontWeight: 'bold'}} className={TestimonialsCSS.topHeader}>Admission Going On, 30% Off for Spring Semester 2022</h1>
+                            <h1 style={{fontWeight: 'bold'}} className={TestimonialsCSS.topHeader}>Admission Going On, 50% Off for Spring Semester 2022</h1>
                         </div>
                         <div className="py-4 ">
                             <div className="player-wrapper">
@@ -30,13 +30,13 @@ const Testimonials = () => {
                            
                         </div>
                         <div className="py-4">
-                            <h2 className="py-2" style={{fontWeight:'700'}}>Remind Your Customers Why They Need To Go To Next Step Here</h2>
+                            <h2 className="py-2" style={{fontWeight:'700'}}>Remind Students Why They Need To Go To Next Step Here</h2>
                             <ul className={TestimonialsCSS.unorderlist} style={{color:"lightgray",fontWeight:'600',fontStyle:'italic'}}>
-                                <li> <p>1. Reason why your lead should take the next step</p>  </li>
-                                <li> <p>2. Reason why your lead should take the next step</p>  </li>
-                                <li> <p>3. Reason why your lead should take the next step</p>  </li>
-                                <li> <p>4. Reason why your lead should take the next step</p>  </li>
-                                <li> <p>5. Reason why your lead should take the next step</p>  </li>
+                                <li> <p>1. visitor can see all of the information about admission</p>  </li>
+                                <li> <p>2. All of the information about tution fee of every departments</p>  </li>
+                                <li> <p>3. Visitor can see Department wise information like CSE,EEE, BBA etc.</p>  </li>
+                                <li> <p>4. Unlock online admission process, it is time saving, less effort for students</p>  </li>
+                                <li> <p>5. Complete Payment to 01755837019 and then transaction id & others info give us in payment form.</p>  </li>
                             </ul>
                         </div>
                     </div>

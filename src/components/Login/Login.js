@@ -146,10 +146,10 @@ const Login = () => {
                     <input placeholder='Enter Your Name' className='form-control' type="text" required onBlur={handleBlur} name='name' />
                 </div>}
                 <div className='form-group my-3 mt-3'>
-                    <input placeholder='Enter Your Email' className='form-control' type="email" required onBlur={handleBlur} name='email' />
+                    <input placeholder='Enter Your Email' className='form-control' type="email" required onBlur={handleBlur} name='email' autoComplete="off" />
                 </div>
                 <div className='form-group my-3'>
-                    <input placeholder='Enter Your Password' className='form-control' type="password" required onBlur={handleBlur} name='password' />
+                    <input placeholder='Enter Your Password' className='form-control' type="password" required onBlur={handleBlur} name='password' autoComplete="off" />
                 </div>
                <input type="submit" value={newUser? 'SIGN UP' : 'LOGIN'} style={{padding:'11px 36px',backgroundColor:'orange', fontSize:'17px', fontWeight:'700',color:'white',border:'none'}} />    
                 </form>  
