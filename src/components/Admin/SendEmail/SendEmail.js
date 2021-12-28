@@ -30,7 +30,7 @@ const SendEmail = () => {
             <h2 style={{fontWeight:'700', textAlign:'left'}} className="p-2">SEND EMAIL</h2>
                 <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
                   
-                <input type='name' className='form-control' name='name' placeholder='Enter name' {...register("name", { required: true })} /> <br/>
+                <input type='name' className='form-control' name='name' placeholder='Enter name' {...register("name")} /> <br/>
 
                     <input type='email' className='form-control' name='email' placeholder='Enter Email' {...register("email", { required: true })} /> <br/>
                     <input type='text' className='form-control' name='subject' placeholder='Enter Subject' {...register("subject", { required: true })} /> <br/>
