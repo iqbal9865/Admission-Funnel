@@ -12,6 +12,7 @@ const Payments = () => {
         const eventData = {
             method: data.paymentMethod,
             phone: data.phone,
+            email: data.email,
             transId: data.transId,
             amount: data.amount,
             reference: data.reference
@@ -58,6 +59,9 @@ const Payments = () => {
                     
                     <div>
                         <input {...register("phone")} required style={{borderRadius:'0'}} type="phone" className="form-control" placeholder="Enter Your Phone Number"  /> <br />
+                    </div>
+                      <div>
+                        <input {...register("email")} required style={{borderRadius:'0'}} type="email" className="form-control" placeholder="Enter Your Email"  /> <br />
                     </div>
                     <div>
                         <input  {...register("transId")} required style={{borderRadius:'0'}}  type="text" className="form-control" placeholder="Enter Transaction Id" /> <br />

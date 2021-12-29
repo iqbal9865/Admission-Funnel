@@ -28,6 +28,7 @@ const ManageAdmission = () => {
                     
                     <th scope="col">Name</th>  
                     <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
                     <th scope="col">YEAR</th>
                     <th scope="col">Semester</th>
                     <th scope="col">Department</th>
@@ -42,6 +43,7 @@ const ManageAdmission = () => {
                             <tr>
                                 <td className="my-2">{registration.name}</td>
                                 <td className="my-2 ">{registration.mobileNumber}</td>
+                                <td className="my-2 ">{registration.email}</td>
                                 <td className="my-2 ">{registration.academicYear}</td>
                                 <td className="my-2 ">{registration.semsester}</td>
                                 <td className="my-2 ">{registration.department}</td>
@@ -60,6 +62,7 @@ const ManageAdmission = () => {
                     <tr>
                     
                     <th scope="col">Phone</th>  
+                    <th scope="col">email</th>  
                     <th scope="col">Trans Id</th>
                     <th scope="col">Amount</th>
                     <th scope="col">Via</th>
@@ -73,6 +76,7 @@ const ManageAdmission = () => {
                         payments.map(payment => 
                             <tr>
                                 <td className="my-2">{payment.phone}</td>
+                                <td className="my-2">{payment.email}</td>
                                 <td className="my-2 ">{payment.transId}</td>
                                 <td className="my-2 ">{payment.amount}</td>
                                 <td className="my-2 ">{payment.method}</td>
