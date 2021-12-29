@@ -242,7 +242,7 @@ const OnlineAdmission = () => {
                         <input className="form-control" autoComplete={false} {...register("sscInstitutionName")} required />
                     </div>
                         <div className="col-sm-12 col-md-3 form-group" style={{paddingLeft: "10px", marginRight: "10px"}}>
-                            <label for="sscBoardName" style={{marginBottom: "10px"}}>Board/University/Country:</label>
+                            <label for="sscBoardName" style={{marginBottom: "10px"}}>Board:</label>
                             <input className="form-control" autoComplete={false} {...register("sscBoardName")} required />
                         </div>
                     
@@ -269,7 +269,7 @@ const OnlineAdmission = () => {
                         <input className="form-control" autoComplete={false} {...register("hscInstitutionName")} required />
                     </div>
                         <div className="col-sm-12 col-md-3 form-group" style={{paddingLeft: "10px", marginRight: "10px"}}>
-                            <label for="hscBoardName" style={{marginBottom: "10px"}}>Board/University/Country:</label>
+                            <label for="hscBoardName" style={{marginBottom: "10px"}}>Board:</label>
                             <input className="form-control" autoComplete={false} {...register("hscBoardName")} required />
                         </div>
                     
