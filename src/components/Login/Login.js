@@ -5,9 +5,6 @@ import firebaseConfig from './firebase.config'
 import { UserContext } from '../../App';
 import { useForm } from 'react-hook-form';
 import {Redirect, useHistory, useLocation} from "react-router-dom";
-// import { faBullseye } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faGoogle } from 'free-regular-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
