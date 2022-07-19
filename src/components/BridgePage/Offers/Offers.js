@@ -1,11 +1,7 @@
 import {useState} from 'react';
-
-import offerTwenty from '../../../images/twenty.gif';
 import offerFifty from '../../../images/fifty.gif';
 import waiverThirty from '../../../images/thirty.gif';
 import waiverSixty from '../../../images/sixty.gif';
-
-//import Admission from '../../../images/Admission.gif';
 import Offer from './Offer';
 const offerInfo = [
     {

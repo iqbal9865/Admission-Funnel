@@ -1,22 +1,5 @@
 import React,{useState,useEffect} from 'react';
 import Event from './Event';
-// import progcont from '../../../images/progcon.png'
-// import busscom from '../../../images/busscom.png'
-// import matholy from '../../../images/matholy.jpg'
-// const eventsInfo = [
-//     {
-//         pic: progcont,
-//         name: 'Programming Contest Fall Semester 2021'
-//     },
-//     {
-//         pic:busscom,
-//         name:'Bussiness competition Fall Semester 2021'
-//     },
-//     {
-//         pic: matholy,
-//         name:'Math Olympiard Summer Fall Semester 2021'
-//     }
-// ]
 
 const Events = () => {
     const [events, setEvents] = useState([])

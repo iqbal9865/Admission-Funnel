@@ -3,10 +3,8 @@ import firebase from "firebase/compat/app"
 import "firebase/compat/auth";
 import firebaseConfig from './firebase.config'
 import { UserContext } from '../../App';
-import { useForm } from 'react-hook-form';
-import {Redirect, useHistory, useLocation} from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import { useHistory, useLocation} from "react-router-dom";
+
 
 if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -50,8 +48,6 @@ const Login = () => {
         console.log('errorCode: ',errorCode,errorMessage, email, credential)
         });
     }
-    const { register,  errors } = useForm();
-    const onSubmit = data => console.log(data);
 
     const handleBlur = (event) => {
         let isFormValid = true;
@@ -82,8 +78,6 @@ const Login = () => {
                 newUserInfo.success = true;
                 newUserInfo.error = '';
                 history.replace(from);
-                
-                // var user = res.user;     
             })
             .catch((error) => {
                 const newUserInfo = {...user};
@@ -102,8 +96,7 @@ const Login = () => {
                 setUser(newUserInfo)
                 setLoggedInUser(newUserInfo)
                 history.replace(from);
-                // console.log('sign in user: ',res.user)
-                // var user = res.user;
+                
             })
             .catch((error) => {
                 const newUserInfo = {...user};
@@ -113,14 +106,11 @@ const Login = () => {
             });
         }
     }
-    // const createNewUser = () => {
-    //     setNewUser(!newUser)
-    // }
+    
     const updateUserInfo = (name) => {
         var user = firebase.auth().currentUser;
         user.updateProfile({
         displayName: name,
-        // photoURL: "https://example.com/jane-q-user/profile.jpg"
         }).then(function() {
             console.log('user name updated successfully')
         }).catch(function(error) {

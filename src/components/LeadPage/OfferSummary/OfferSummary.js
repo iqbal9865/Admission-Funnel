@@ -1,9 +1,9 @@
 import React from 'react';
 import {useState, useEffect,useRef} from 'react';
 import OfferSummaryCSS from './OfferSummary.module.css';
-import OptinForm from "../OptinForm/OptinForm"
-import offerimg from '../../../images/Admission_banner.gif'
-import logo from '../../../images/BC-removebg-preview.png'
+import OptinForm from "../OptinForm/OptinForm";
+import offerimg from '../../../images/Admission_banner.gif';
+import logo from '../../../images/BC-removebg-preview.png';
 const OfferSummary  = () => {
 
     const [timerDays, setTimerDays] = useState("00");
@@ -50,7 +50,7 @@ const OfferSummary  = () => {
            <div className="row py-5">
                <div className="col-md-6 p-4">
                     <h1 style={{color:'#FA9516', fontWeight:'700'}} className="mx-3 px-2 py-3 mt-3">50% OFF FOR SPRING SEMESTER 2021</h1>
-                    {/* <h3 style={{color:'white',fontWeight:'700'}} className="py-3">XYZ UNIVERSITY</h3> */}
+                    
                     <img src={logo} alt="..." className='img-fluid w-50' />
                     <h4 style={{color:'white',fontWeight:'700'}} className='pt-2'>10 December - 30 December</h4>
 

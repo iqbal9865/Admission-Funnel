@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import banner from '../../../images/banner.jpg';
+
 import BannerCSS from './Banner.module.css'
 
 
@@ -24,7 +24,6 @@ const Banner = () => {
                <div>
             </div>
               
-            {/* style={{borderRadius: '10px', backgroundColor: '#EDEDED', padding: '20px'}} */}
 
                <p className={BannerCSS.para}>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. lorem ipsum dolar Lorem ipsum, dolor sit amet consectetur adipisicing elit. lorem
